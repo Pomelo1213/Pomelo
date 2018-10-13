@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="CodeSnippets"/>
+  <meta property="og:description" content="JSer, CSSer, Reacter" />
+  <meta property="og:site_name" content="Pomelo是个小渣渣"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Pomelo是个小渣渣" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Pomelo是个小渣渣</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">CodeSnippets</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/pomelo1213">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:<your-email-address>">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-10-13</span>
+            <span class="time">18:08:12</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>这是在自己总结出的一些Code，用于学习。</p>
+<h3 id="Code-Snippets"><a href="#Code-Snippets" class="headerlink" title="Code Snippets"></a>Code Snippets</h3><ul>
+<li><p>去除数组中的falsy值</p>
+<figure class="highlight coffee"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">""</span>, <span class="literal">undefined</span>, <span class="literal">null</span>, <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line">method = arr =&gt; arr.filter Boolean</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将数组中的VIP客户的余额加10</p>
+<figure class="highlight coffee"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">users = [</span><br><span class="line">  &#123;</span><br><span class="line">    username: <span class="string">'kim'</span></span><br><span class="line">    isVIP: <span class="literal">true</span></span><br><span class="line">    balance: <span class="number">20</span></span><br><span class="line">  &#125;</span><br><span class="line">  &#123;</span><br><span class="line">    username: <span class="string">'tom'</span></span><br><span class="line">    isVIP: <span class="literal">false</span></span><br><span class="line">    balance: <span class="number">30</span></span><br><span class="line">  &#125;</span><br><span class="line">  &#123;</span><br><span class="line">    username: <span class="string">'steph'</span></span><br><span class="line">    isVIP: <span class="literal">true</span></span><br><span class="line">    balance: <span class="number">30</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line">users.map (user) =&gt;</span><br><span class="line">  &#123;</span><br><span class="line">    user...</span><br><span class="line">    balance: user.balance + <span class="number">10</span></span><br><span class="line">  &#125; <span class="keyword">if</span> user.isVIP?</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>判断字符串中是否含有某些字母(例如元音字母)</p>
+<figure class="highlight coffee"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'hdjrwqpi'</span></span><br><span class="line"><span class="function"><span class="title">isContain</span> = <span class="params">(char)</span> =&gt;</span></span><br><span class="line">  [<span class="string">'a'</span>,<span class="string">'e'</span>, <span class="string">'o'</span>, <span class="string">'i'</span>, <span class="string">'u'</span>].includes char</span><br><span class="line"><span class="function"><span class="title">containTest</span> = <span class="params">(str)</span> =&gt;</span></span><br><span class="line">  [str...].some isContain</span><br><span class="line">containTest str</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>找出年龄小于18的人</p>
+<figure class="highlight coffee"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">users = [</span><br><span class="line">  &#123;</span><br><span class="line">    name: <span class="string">'kim'</span></span><br><span class="line">    age: <span class="number">23</span></span><br><span class="line">  &#125;</span><br><span class="line">  &#123;</span><br><span class="line">    name: <span class="string">'Lilly'</span></span><br><span class="line">    age: <span class="number">17</span></span><br><span class="line">  &#125;</span><br><span class="line">  &#123;</span><br><span class="line">    name: <span class="string">'Jack'</span></span><br><span class="line">    age: <span class="number">25</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br><span class="line"><span class="function"><span class="title">findAge</span> = <span class="params">(users)</span> =&gt;</span></span><br><span class="line">  users.find (user) =&gt;</span><br><span class="line">    user.age &lt; <span class="number">18</span></span><br><span class="line">findAge users</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>去除数组中的重复项</p>
+<figure class="highlight coffee"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">1</span>]</span><br><span class="line"><span class="function"><span class="title">unique</span> = <span class="params">(arr)</span> =&gt;</span></span><br><span class="line">  [<span class="keyword">new</span> Set(arr)...]</span><br><span class="line">unique arr</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成随机整数组成的数组， 数组长度和元素大小可定义</p>
+<figure class="highlight coffee"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">getNumber</span> = <span class="params">(length, limit)</span> =&gt;</span></span><br><span class="line">  Array.<span class="keyword">from</span> &#123; length &#125;</span><br><span class="line">  , <span class="function">=&gt;</span> </span><br><span class="line">    Math.floor Math.random() * limit</span><br><span class="line">getNumber <span class="number">10</span>, <span class="number">100</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
