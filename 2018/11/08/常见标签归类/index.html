@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="常见标签归类"/>
+  <meta property="og:description" content="JSer, CSSer, Reacter" />
+  <meta property="og:site_name" content="Pomelo是个小渣渣"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Pomelo是个小渣渣" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Pomelo是个小渣渣</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">常见标签归类</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/pomelo1213">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:<your-email-address>">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-11-08</span>
+            <span class="time">10:29:13</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/前端/">前端</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/HTML/">#HTML</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="a标签"><a href="#a标签" class="headerlink" title="a标签"></a>a标签</h2><ul>
+<li>a标签的href属性<blockquote>
+<p>没有href属性是没有意义，本身和span没有区别。<br>href=”qq.com”—-&gt;打开的是一个相对文件路径，并不会打开网址。<br>href=”<a href="http://qq.com&quot;----&gt;打开是一个网址。" target="_blank" rel="noopener">http://qq.com&quot;----&gt;打开是一个网址。</a><br>href=”//qq.com”—-&gt;这是无协议，自动继承协议//会自动识别在它之前的协议。若是直接打开，识别的是file协议，若是指定了协议，例如localhost:8080//qq.com，则会识别http协议，从而打开qq网址。<br>href=”javascript:;”—-&gt;这是伪协议，这种用法常见于奇葩的需求。例如：我需要一个点击之后不反应的链接。<br>—-&gt;if我们不使用href，就点击不了，不符合。<br>—-&gt;if我们使用href=””则会刷新本页面，不符合。<br>—-&gt;if我们使用href=”#”产生锚点，会调到页面最上端，不符合。<br>—-&gt;if我们使用href=”javascript:;”，不产生任何动作，解决！<br>—-&gt;href=”javascript:alert(1)”，是存在可执行的。<br>href=”?name=luoxin”，会在url后面添加?name=luoxin并且发起了一个get请求。<br>href=”#xxx”，在url后面添加#xxx添加一个锚点，并不会发起请求。</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p>a标签的target属性</p>
+<blockquote>
+<p>主要有:<br>“_blank”：新开一个空白页，打开网址。<br>“_self”：在自身窗口打开网址。<br>“_parent”：在父级窗口打开网址。<br>“_top”：在最上级窗口打开网址。<br>如果我用（iframe）在A窗口中嵌套B窗口，在B窗口中嵌套C窗口。那么C窗口的父级指的是B，最上级指的是A。</p>
+</blockquote>
+</li>
+<li><p>a标签的download属性可以实现下载操作。</p>
+</li>
+</ul>
+<hr>
+<h2 id="form标签"><a href="#form标签" class="headerlink" title="form标签"></a>form标签</h2><p>标签要有name属性，不然是无法在请求中得到。</p>
+<p>1.a标签和form标签都是跳转页面，不过a标签是get请求，form是post请求。get是获取内容，post是提交内容。<br>2.form标签的target属性和a标签是一样。<br>3.form里面没有提交按钮是无法进行提交表单。（除非用JS）</p>
+<h3 id="form里面的input"><a href="#form里面的input" class="headerlink" title="form里面的input"></a>form里面的input</h3><p>input的type属性<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>xxx<span class="tag">&lt;<span class="name">button</span>&gt;</span>----&gt;button样式--A</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"xxx"</span>&gt;</span>----&gt;button样式--B</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"xxx"</span>&gt;</span>----&gt;button样式--C</span><br></pre></td></tr></table></figure></p>
+<p>上面三个都是一样的button样式。那么他们有什么区别呢？如果一个form中没有submit按钮。那么A就会自动升级为提交按钮，具有提交功能，B具有提交功能，C是严格意义上的按钮，不具有提交功能。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span>&gt;</span></span><br><span class="line">多选框，示例如下：</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"xxx"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"xxx"</span>&gt;</span>名字<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>label的for属性关联了checkbox，点击文字时，多选框也会被选中。<br>—-&gt;简洁版如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input="checkbox"</span>&gt;</span>名字<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">省略了id和for，更加简洁。</span><br><span class="line">------------------------------------------------</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span>&gt;</span></span><br><span class="line">也可以与文字关联和checkbox一样使用关联。</span><br><span class="line">-----------------------------------------------</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="select标签"><a href="#select标签" class="headerlink" title="select标签"></a>select标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">multiple</span>&gt;</span> ----&gt;multiple支持多选</span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">disabled</span>&gt;</span> ----&gt;diabled属性，选项中标记了disabled是无法被选中。</span><br><span class="line">  <span class="tag">&lt;<span class="name">option</span> <span class="attr">selected</span>&gt;</span> ----&gt;selected属性，默认选中的选项。</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="table标签"><a href="#table标签" class="headerlink" title="table标签"></a>table标签</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tfoot</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>浏览器会按照这个顺序来进行显示，不按照写的顺序显示。</p>
+<p>table有很多子元素，示例：<br><img src="https://user-gold-cdn.xitu.io/2017/12/28/1609c255b31896d4?w=730&amp;h=676&amp;f=jpeg&amp;s=34241" alt="table.jpg"></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

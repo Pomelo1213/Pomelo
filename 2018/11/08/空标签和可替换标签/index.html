@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="空标签和可替换标签"/>
+  <meta property="og:description" content="JSer, CSSer, Reacter" />
+  <meta property="og:site_name" content="Pomelo是个小渣渣"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Pomelo是个小渣渣" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Pomelo是个小渣渣</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">空标签和可替换标签</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/pomelo1213">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:<your-email-address>">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-11-08</span>
+            <span class="time">10:29:13</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/前端/">前端</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/HTML/">#HTML</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <hr>
+<h1 id="空标签"><a href="#空标签" class="headerlink" title="空标签"></a>空标签</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">没有闭合的标签称为空标签，如：<span class="tag">&lt;<span class="name">br</span>/&gt;</span>和<span class="tag">&lt;<span class="name">img</span>/&gt;</span>等。他们不存在成对的情况（我是这么理解，觉得的不对的请指正我。）</span><br><span class="line">反之具有成对性质的例如：<span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>、<span class="tag">&lt;<span class="name">form</span>&gt;</span><span class="tag">&lt;/<span class="name">form</span>&gt;</span>就不是空标签。</span><br><span class="line">在HTML中，在空标签上使用闭标签是无效的，例如：<span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;/<span class="name">br</span>&gt;</span>。这样的情况是无效的HTML。</span><br></pre></td></tr></table></figure>
+<h1 id="常见的空标签如下："><a href="#常见的空标签如下：" class="headerlink" title="常见的空标签如下："></a>常见的空标签如下：</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">area</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">base</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">col</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">colgroup</span>&gt;</span> when the span is present</span><br><span class="line"><span class="tag">&lt;<span class="name">command</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">embed</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">keygen</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">source</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">track</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">wbr</span>&gt;</span></span><br><span class="line">----------------------------------------------------------------------------------</span><br><span class="line">Note:在极少的情况下，空元素被错误的称为“无效元素”(void elements)</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="可替换标签"><a href="#可替换标签" class="headerlink" title="可替换标签"></a>可替换标签</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在CSS里，可替换元素(replaced element)的展现不是由CSS来控制的。</span><br><span class="line">这些元素是一类外观渲染独立于CSS的外部对象。</span><br><span class="line">典型的可替换元素有<span class="tag">&lt;<span class="name">img</span>&gt;</span>、<span class="tag">&lt;<span class="name">object</span>&gt;</span>、<span class="tag">&lt;<span class="name">video</span>&gt;</span>和表单元素，如<span class="tag">&lt;<span class="name">textarea</span>&gt;</span>、<span class="tag">&lt;<span class="name">input</span>&gt;</span>。</span><br><span class="line">某些元素只在一些特殊情况下表现为可替换元素，例如<span class="tag">&lt;<span class="name">audio</span>&gt;</span>和<span class="tag">&lt;<span class="name">canvas</span>&gt;</span>。</span><br><span class="line">通过CSS的content属性来插入的对象被称为匿名可替换对象(annoymous replaced elements)。</span><br><span class="line">CSS在某些情况下会对可替换元素做特殊处理，比如计算外边距和一些auto值。</span><br><span class="line">需要注意的是，一部分（并非全部）可替换元素，本身具有尺寸和基线(baseline)，会被想vertical-align之类的一些CSS属性用到。</span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
